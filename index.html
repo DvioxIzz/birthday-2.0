@@ -1,0 +1,1133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+<title>For Nurizzatul Nadia ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --pink: #ff4f81;
+    --pink-light: #ff8fab;
+    --pink-dark: #b82e59;
+    --cream: #fff8f9;
+    --text: #351d28;
+    --glass: rgba(255,255,255,.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 20% 20%, #ffb6c9 0, transparent 30%),
+        radial-gradient(circle at 80% 80%, #d8a5ff 0, transparent 30%),
+        linear-gradient(135deg, #fff0f4, #f6d7e3);
+    overflow-x: hidden;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -40px;
+    font-size: 20px;
+    opacity: .65;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .7;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 950px);
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 25px;
+}
+
+.logo {
+    font-family: "Parisienne", cursive;
+    font-size: 32px;
+    color: var(--pink-dark);
+}
+
+.love-toggle {
+    border: none;
+    background: rgba(255,255,255,.65);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 8px 25px rgba(120,40,70,.1);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.screen {
+    display: none;
+    min-height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn .7s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 720px;
+    padding: 40px;
+    border-radius: 35px;
+    background: rgba(255,255,255,.58);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow:
+        0 30px 80px rgba(126,45,78,.15),
+        inset 0 1px rgba(255,255,255,.7);
+    text-align: center;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: var(--pink-dark);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(42px, 8vw, 78px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(32px, 6vw, 50px);
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    line-height: 1.8;
+    opacity: .75;
+    max-width: 580px;
+    margin: auto;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+    touch-action: manipulation;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff4f81, #ff769d);
+    color: white;
+    box-shadow: 0 12px 30px rgba(255,79,129,.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--pink-dark);
+}
+
+.btn:active {
+    transform: scale(.96);
+}
+
+/* =========================
+   TIC TAC TOE
+========================= */
+
+.game-board {
+    width: min(90vw, 330px);
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 18px;
+    background: rgba(255,255,255,.75);
+    font-size: 38px;
+    cursor: pointer;
+    color: var(--pink);
+    box-shadow: 0 8px 20px rgba(100,30,60,.08);
+}
+
+.cell:hover {
+    background: white;
+}
+
+/* =========================
+   LOVE METER
+========================= */
+
+.meter {
+    width: min(90%, 500px);
+    height: 28px;
+    background: rgba(255,255,255,.6);
+    border-radius: 50px;
+    margin: 35px auto 15px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ff4f81, #ffb3c6);
+    transition: width 2s cubic-bezier(.2,.8,.2,1);
+}
+
+.percent {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--pink-dark);
+}
+
+/* =========================
+   TYPEWRITER
+========================= */
+
+.typewriter {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    font-family: "Parisienne", cursive;
+    font-size: clamp(32px, 7vw, 58px);
+    line-height: 1.3;
+    color: var(--pink-dark);
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.photo {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffd6e1;
+    box-shadow: 0 12px 30px rgba(100,30,60,.1);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .4s;
+}
+
+.photo:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 14px;
+    top: -20px;
+    z-index: 100;
+    pointer-events: none;
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 50;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 14px;
+    }
+
+    header {
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .love-toggle {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .screen {
+        min-height: calc(100svh - 80px);
+    }
+
+    .card {
+        padding: 30px 20px;
+        border-radius: 28px;
+    }
+
+    h1 {
+        font-size: 47px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+        border-radius: 14px;
+    }
+}
+
+/* =========================
+   DARK LOVE MODE
+========================= */
+
+body.dark {
+    color: #fff0f5;
+    background:
+        radial-gradient(circle at 20% 20%, #68253d, transparent 35%),
+        radial-gradient(circle at 80% 80%, #40205f, transparent 35%),
+        #160d15;
+}
+
+body.dark .card {
+    background: rgba(45,20,35,.65);
+    border-color: rgba(255,255,255,.1);
+}
+
+body.dark .love-toggle,
+body.dark .btn-secondary,
+body.dark .cell {
+    background: rgba(255,255,255,.1);
+    color: white;
+}
+
+body.dark .logo,
+body.dark .message,
+body.dark .percent {
+    color: #ff9fbd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="app">
+
+<header>
+    <div class="logo">For My Love ♡</div>
+
+    <button class="love-toggle" onclick="toggleDark()">
+        🌙 Love Mode
+    </button>
+</header>
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="screen active" id="home">
+    <div class="card">
+
+        <div class="eyebrow">A little surprise for you</div>
+
+        <h1>
+            Happy<br>
+            Valentine's Day ❤️
+        </h1>
+
+        <p class="subtitle">
+            I made this little corner of the internet
+            just for you. There are a few surprises
+            waiting inside...
+        </p>
+
+        <div class="buttons">
+            <button class="btn btn-primary"
+                    onclick="showScreen('game')">
+                Open My Surprise 💌
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     TIC TAC TOE
+========================= -->
+
+<section class="screen" id="game">
+    <div class="card">
+
+        <div class="eyebrow">Game #01</div>
+
+        <h2>Let's Play ❤️</h2>
+
+        <p class="subtitle">
+            Win this little game and unlock
+            something special.
+        </p>
+
+        <div class="game-board" id="board">
+            <button class="cell" onclick="move(0)"></button>
+            <button class="cell" onclick="move(1)"></button>
+            <button class="cell" onclick="move(2)"></button>
+            <button class="cell" onclick="move(3)"></button>
+            <button class="cell" onclick="move(4)"></button>
+            <button class="cell" onclick="move(5)"></button>
+            <button class="cell" onclick="move(6)"></button>
+            <button class="cell" onclick="move(7)"></button>
+            <button class="cell" onclick="move(8)"></button>
+        </div>
+
+        <p id="gameStatus">
+            Your turn ❤️
+        </p>
+
+        <div class="buttons">
+            <button class="btn btn-secondary"
+                    onclick="resetGame()">
+                Restart
+            </button>
+
+            <button class="btn btn-primary"
+                    onclick="showScreen('meter')">
+                Skip Game 💕
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     LOVE METER
+========================= -->
+
+<section class="screen" id="meter">
+    <div class="card">
+
+        <div class="eyebrow">Game #02</div>
+
+        <h2>Our Love Meter</h2>
+
+        <p class="subtitle">
+            Let's measure how much I love you...
+        </p>
+
+        <div class="meter">
+            <div class="meter-fill" id="meterFill"></div>
+        </div>
+
+        <div class="percent" id="percent">
+            0%
+        </div>
+
+        <p class="subtitle" id="meterText">
+            Calculating...
+        </p>
+
+        <div class="buttons">
+            <button class="btn btn-primary"
+                    onclick="startMeter()">
+                Measure Our Love 💗
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="screen" id="messageScreen">
+    <div class="card">
+
+        <div class="eyebrow">A message from me</div>
+
+        <div class="typewriter">
+            <div class="message" id="message"></div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary"
+                    onclick="showScreen('gallery')">
+                See Our Memories 📸
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="screen" id="gallery">
+    <div class="card">
+
+        <div class="eyebrow">Our Memories</div>
+
+        <h2>Us ❤️</h2>
+
+        <p class="subtitle">
+            Replace these pictures with
+            your favourite memories together.
+        </p>
+
+        <div class="gallery">
+
+            <!--
+                Replace these URLs with your own photos.
+
+                Example:
+                <img src="photos/1.jpg">
+            -->
+
+            <div class="photo"><img src="photos/1.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="photos/2.jpeg" alt="Memory 2"></div>
+    <div class="photo"><img src="photos/3.jpeg" alt="Memory 3"></div>
+    <div class="photo"><img src="photos/4.jpeg" alt="Memory 4"></div>
+    <div class="photo"><img src="photos/5.jpeg" alt="Memory 5"></div>
+    <div class="photo"><img src="photos/6.jpeg" alt="Memory 6"></div>
+
+
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary"
+                    onclick="showFinal()">
+                One Last Surprise 💝
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="screen" id="final">
+    <div class="card">
+
+        <div class="eyebrow">Forever & Always</div>
+
+        <h1>Thank You ❤️</h1>
+
+        <p class="subtitle">
+
+            Thank you for being part of my life.
+
+            <br><br>
+
+            Through all the silly moments,
+            arguments, laughs, adventures and
+            quiet days...
+
+            <br><br>
+
+            I would still choose you.
+
+            <br><br>
+
+            <strong>
+                I love you more than words can say. ❤️
+            </strong>
+
+        </p>
+
+        <div class="buttons">
+            <button class="btn btn-primary"
+                    onclick="celebrate()">
+                I Love You Too 💕
+            </button>
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+
+<!-- MUSIC BUTTON -->
+
+<button class="music-btn"
+        onclick="toggleMusic()"
+        id="musicButton">
+    🔇
+</button>
+
+<!-- Background Music -->
+<audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support HTML5 audio.
+</audio>
+<script>
+
+/* =========================
+   SCREEN NAVIGATION
+========================= */
+
+function showScreen(id) {
+
+    document.querySelectorAll(".screen")
+        .forEach(screen => {
+            screen.classList.remove("active");
+        });
+
+    document.getElementById(id)
+        .classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    if (id === "messageScreen") {
+        typeMessage();
+    }
+}
+
+
+/* =========================
+   DARK / LOVE MODE
+========================= */
+
+function toggleDark() {
+
+    document.body.classList.toggle("dark");
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["❤️","💕","💗","💖","💘","💞"];
+
+    heart.innerText =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 7) + "s";
+
+    document.getElementById("hearts")
+        .appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 13000);
+}
+
+setInterval(createHeart, 500);
+
+
+/* =========================
+   TIC TAC TOE
+========================= */
+
+let board = ["","","","","","","","",""];
+
+let gameOver = false;
+
+function move(index) {
+
+    if (board[index] !== "" || gameOver) {
+        return;
+    }
+
+    board[index] = "❤️";
+
+    renderBoard();
+
+    if (checkWin("❤️")) {
+
+        gameOver = true;
+
+        document.getElementById("gameStatus")
+            .innerText =
+            "You won my heart! ❤️";
+
+        setTimeout(() => {
+            celebrate();
+            showScreen("meter");
+        }, 900);
+
+        return;
+    }
+
+    if (!board.includes("")) {
+
+        document.getElementById("gameStatus")
+            .innerText =
+            "Okay... you win anyway 😌";
+
+        return;
+    }
+
+    setTimeout(computerMove, 300);
+}
+
+
+function computerMove() {
+
+    if (gameOver) return;
+
+    const empty =
+        board
+        .map((v,i) => v === "" ? i : null)
+        .filter(v => v !== null);
+
+    if (!empty.length) return;
+
+    const index =
+        empty[Math.floor(Math.random() * empty.length)];
+
+    board[index] = "💗";
+
+    renderBoard();
+
+    if (checkWin("💗")) {
+
+        gameOver = true;
+
+        document.getElementById("gameStatus")
+            .innerText =
+            "The computer tried... but love always wins ❤️";
+    }
+}
+
+
+function renderBoard() {
+
+    document
+        .querySelectorAll(".cell")
+        .forEach((cell,index) => {
+            cell.innerText = board[index];
+        });
+}
+
+
+function checkWin(player) {
+
+    const wins = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
+
+    return wins.some(combo =>
+        combo.every(index =>
+            board[index] === player
+        )
+    );
+}
+
+
+function resetGame() {
+
+    board = ["","","","","","","","",""];
+
+    gameOver = false;
+
+    renderBoard();
+
+    document.getElementById("gameStatus")
+        .innerText =
+        "Your turn ❤️";
+}
+
+
+/* =========================
+   LOVE METER
+========================= */
+
+let meterStarted = false;
+
+function startMeter() {
+
+    if (meterStarted) return;
+
+    meterStarted = true;
+
+    const fill =
+        document.getElementById("meterFill");
+
+    const percent =
+        document.getElementById("percent");
+
+    const text =
+        document.getElementById("meterText");
+
+    let value = 0;
+
+    const timer = setInterval(() => {
+
+        value++;
+
+        fill.style.width = value + "%";
+
+        percent.innerText =
+            value + "%";
+
+        if (value >= 100) {
+
+            clearInterval(timer);
+
+            text.innerText =
+                "Error: Love level is too high. ❤️";
+
+            setTimeout(() => {
+
+                showScreen("messageScreen");
+
+            }, 1500);
+        }
+
+    }, 20);
+}
+
+
+/* =========================
+   TYPEWRITER
+========================= */
+
+const loveMessage =
+`To the most beautiful person in my life,
+
+Every moment with you is a memory
+I want to keep forever.
+
+You make ordinary days feel special,
+and somehow you make my world
+a little brighter just by being in it.
+
+I love you. ❤️`;
+
+let typed = false;
+
+function typeMessage() {
+
+    if (typed) return;
+
+    typed = true;
+
+    const element =
+        document.getElementById("message");
+
+    let index = 0;
+
+    function type() {
+
+        if (index < loveMessage.length) {
+
+            element.innerHTML =
+                loveMessage
+                    .substring(0, index + 1)
+                    .replace(/\n/g, "<br>");
+
+            index++;
+
+            setTimeout(type, 35);
+
+        }
+    }
+
+    type();
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function celebrate() {
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "✨"
+    ];
+
+    for (let i = 0; i < 80; i++) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.innerText =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.fontSize =
+            (12 + Math.random() * 18) + "px";
+
+        piece.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
+
+        piece.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 5000);
+    }
+}
+
+
+/* =========================
+   FINAL SCREEN
+========================= */
+
+function showFinal() {
+
+    celebrate();
+
+    showScreen("final");
+
+}
+
+
+/* =========================
+   OPTIONAL MUSIC
+========================= */
+
+let musicPlaying = false;
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+    if (!music) {
+
+        alert(
+            "Add a music.mp3 file beside index.html first."
+        );
+
+        return;
+    }
+
+    if (musicPlaying) {
+
+        music.pause();
+
+        document.getElementById("musicButton")
+            .innerText = "🔇";
+
+        musicPlaying = false;
+
+    } else {
+
+        music.play();
+
+        document.getElementById("musicButton")
+            .innerText = "🎵";
+
+        musicPlaying = true;
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
